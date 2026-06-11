@@ -269,6 +269,85 @@ nav a:hover{
 }
 
 /* =====================================================
+   SECTION LABEL — light backgrounds
+   Yellow on white = 1.78:1 (fails WCAG). Use dark text
+   with a short yellow accent bar instead.
+===================================================== */
+
+.section-label-light{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:#0B0F16;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    font-size:.8rem;
+}
+
+.section-label-light::before{
+    content:'';
+    display:inline-block;
+    width:24px;
+    height:3px;
+    background:var(--primary);
+    border-radius:2px;
+    flex-shrink:0;
+}
+
+/* SVG icon wrapper — service cards & stats */
+.icon-wrap{
+    width:64px;
+    height:64px;
+    border-radius:16px;
+    background:rgba(245,184,0,.10);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s ease;
+}
+
+.service-card:hover .icon-wrap{
+    background:var(--primary);
+}
+
+.service-card:hover .icon-wrap svg{
+    color:#000;
+}
+
+/* Social icon buttons */
+.social-btn{
+    width:44px;
+    height:44px;
+    border-radius:8px;
+    background:rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s ease;
+    color:#ccc;
+}
+
+.social-btn:hover{
+    background:var(--primary);
+    color:#000;
+}
+
+/* Contact info row */
+.contact-row{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    color:#9CA3AF;
+}
+
+.contact-row svg{
+    flex-shrink:0;
+    margin-top:2px;
+    color:var(--primary);
+}
+
+/* =====================================================
    CTA STRIP
 ===================================================== */
 
